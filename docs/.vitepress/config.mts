@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "docs-appweb-trpr02",
   description: "Revue de code du travail pratique 02 de Émile Lafleur et Marek Boudreau",
-  base: '/docs-appweb-trpr02/',
+  base: '/documentation-appweb-trpr02/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
