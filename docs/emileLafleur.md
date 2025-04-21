@@ -44,18 +44,6 @@ Les critères pour l'évaluation sont respectés
 Dans le code de Jimmy, Il y a ceci à corriger
 
 **Code Incorrect**
-
-```ts
-export default {
-  data() {
-    return {
-      msg: "Highlighted!",
-    };
-  },
-};
-```
-
-:::
 ```
 
 :::La documentation de Émile est accompagné d'un gabarit à suivre, permettant d'avoir une
