@@ -52,10 +52,7 @@ Dans le code de Jimmy, Il y a ceci à corriger
 
 ## Revue de code 02 - 20 avril 2025
 ::: info
-Dans le code de émile, les système utilitaire comme les différents services pour accèder à la base de données sont très biens implémentés
-
-::: info
-Le service pour accèder avoir le tableau des scores est très biens construit et simple à utiliser
+Dans le code de émile, les système utilitaire comme les différents services pour accèder à la base de données sont très biens implémentés comme le service pour accèder avoir le tableau des scores est très biens construit et simple à utiliser
 
 **Code**
 
@@ -80,7 +77,7 @@ export const rankingService = {
 ::: info
 C'est égallement le cas pour celui permettant d'Avoir les personnages
 
-
+**Code**
 ```ts
 const API_URL = 'http://127.0.0.1:3000'
 
@@ -101,8 +98,9 @@ export const rankingService = {
 ```
 
 ::: info
-Et pour accèder aux vaisseaux
+Et pour accéder aux vaisseaux
 
+**Code**
 ```ts
 const API_URL = 'http://127.0.0.1:3000'
 
