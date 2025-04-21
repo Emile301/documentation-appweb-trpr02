@@ -39,4 +39,24 @@ export default {
 
 :::
 
+::: info
+
+### Correction 02 - 20 avril 2025
+
+::: info
+Dans le code de émile, les système utilitaire comme les différents services pour accèder à la base de données sont très biens implémentés
+**Code**
+
+```ts
+export default {
+  data() {
+    return {
+      msg: "Highlighted!",
+    };
+  },
+};
+```
+
+:::
+
 <!----------------------------->
