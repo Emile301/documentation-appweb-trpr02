@@ -98,4 +98,53 @@ main{
 
 ## Revue de code 02 - 20 avril 2025
 
+::: info
+
+### remarque 01
+
+::: info
+Dans le code de Marek, l'utilisation du watch pour emit un nouveau nom à chaque chagement est très habile.
+
+**Code**
+
+```ts
+import { ref, watch } from "vue";
+
+const emit = defineEmits(["update:nom"]);
+
+watch(nom, (newValue) => {
+  emit("update:nom", newValue);
+  console.log(newValue);
+});
+```
+
+:::
+
+::: info
+
+### remarque 01
+
+::: info
+Dans le code de Marek, l'utilisation des commentaire dans code donne de bonne information sur ce qu'il reste à faire.
+
+**Code**
+
+```ts
+<main class="mt-5 pt-5">
+    <div class="d-flex flex-column align-items-center">
+      <button id="jouer" type="button" class="btn btn-lg btn-outline-primary starWarsButton">Jouer</button>
+    </div>
+
+    <!-- L'espace entre le boutton jouer et les trois éléments sera ici (mettre un mb sur la div en haut ou un mt sur celle en bas)-->
+    <div class="d-flex justify-content-around w-100 mt-3">
+      <NameInput @update:nom="updateNom" />
+
+      <!--mettre le boutton du scoreboard ici-->>
+      <VaisseauInput @update:vaisseau="updateVaisseau"/>
+    </div>
+  </main>
+```
+
+:::
+
 ## Revue de code 03 - 27 avril 2025
