@@ -115,3 +115,121 @@ export const vaisseauxService = {
 
 ```
 ## Revue de code 03 - 27 avril 2025
+:::info
+Émile s'est spécialisé dans la création de tests optimal pour la vérification de tous les éléments dans la page. Comme on peut
+le ramarquer dans le code ci-bas, le test vérifie biens que CHAQUES éléments de la page sont biens présent. Merci Émile pour ton travail
+acharné.
+
+**Code**
+```ts
+  it('renders properly when valide', () => {
+    const wrapper = mount(nameInput, { props: { valide: true } })
+
+    //card
+    expect(wrapper.find('div[class="card text mb-3"]').exists()).toBeTruthy()
+
+    //titre du champ attendu
+    expect(wrapper.find('h5').exists()).toBeTruthy()
+    expect(wrapper.find('#nom').exists()).toBeTruthy()
+
+    //champ nom attendu
+    expect(wrapper.find('input[type="text"]').exists()).toBeTruthy()
+    expect(wrapper.find('#textNom').exists()).toBeTruthy()
+
+    //champ erreur pas attendu
+    expect(
+      wrapper.find('div[class="invalid-feedback"]').exists()
+    ).not.toBeTruthy()
+  })
+```
+
+:::info
+Et ce n'est pas tout! non seulement ses tests vérifient la présence des différents éléments dans la page, mais en plus, ils vérifient
+leur fonctionnement! Le test ci-dessous vérifie que le nom est bien émis une fois enregistré. Ce qui permet d'épargner a nos coeurs
+le stress d'un boutton qui ne marcherait malencontreusement pas.
+
+**Code**
+```ts
+  it('au changement du nom, le nouveau nom est émit', async () => {
+    const wrapper = mount(nameInput, { props: { valide: true } })
+    const NomSelector = wrapper.find('input[type="text"]')
+    const nom = 'nomTest'
+
+    await NomSelector.setValue(nom)
+
+    expect(wrapper.emitted('update:nom')![0]).toEqual([nom])
+  })
+```
+
+:::info
+En plus des nombreux tests éxécuté à la perfection, mon Camarade de classe et partenaire Émile Lafleur à brillament fait des bouttons
+de navigations dans l'applications. Ce qui s'avère très pratique pour les aventuriers cherchant à naviger dans l'application. Émile maitrise
+la création de boutton comme personne.
+"On ne va jamais aussi loin que lorsqu'on ne sait pas où on va." - Christophe Colomb
+
+**Code**
+```ts
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const affichage = ref('none')
+
+function confirmationMessage () {
+  affichage.value = 'flex'
+}
+
+function annuler () {
+  affichage.value = 'none'
+}
+</script>
+
+<template>
+  <button
+    id="GoRanking"
+    class="btn btn-lg ms-2 btn-outline-primary text-standard btn-dimension"
+    @click="confirmationMessage()"
+  >
+    aller au classement
+  </button>
+
+  <div
+    id="fullscreenAlert"
+    class="fullscreen-alert"
+    :style="{ display: affichage }"
+  >
+    <div class="alert alert-danger">
+      <div>
+        <h2 class="text-standard"><i>"This is where the fun begin"</i></h2>
+      </div>
+      <p class="text-white text-contour">
+        Voulez-vous vraiment aller au classement?
+      </p>
+      <p class="text-white text-contour">
+        Votre progression ne sera pas sauvegardé!
+      </p>
+
+      <div class="row">
+        <div class="col">
+          <button
+            id="cancel"
+            class="btn btn-lg ms-2 btn-outline-primary btn-dimension text-vide"
+            @click="annuler()"
+          >
+            annuler
+          </button>
+        </div>
+        <div class="col">
+          <RouterLink :to="{ name: 'Ranking' }">
+            <button
+              id="confirme"
+              class="btn btn-lg ms-2 btn-outline-primary btn-dimension text-vide"
+            >
+              Classement
+            </button>
+          </RouterLink>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+```
