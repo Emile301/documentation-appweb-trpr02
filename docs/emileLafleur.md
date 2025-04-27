@@ -29,7 +29,7 @@ hero:
 ::: info
 La documentation est biens effectué et l'écran d'acueille est très accueillant.
 Les critères pour l'évaluation sont respectés
-
+:::
 ```ts
 
 # template à suivre pour la revue de code
@@ -53,6 +53,7 @@ Dans le code de Jimmy, Il y a ceci à corriger
 ## Revue de code 02 - 20 avril 2025
 ::: info
 Dans le code de émile, les système utilitaire comme les différents services pour accèder à la base de données sont très biens implémentés comme le service pour accèder avoir le tableau des scores est très biens construit et simple à utiliser
+:::
 
 **Code**
 
@@ -76,6 +77,7 @@ export const rankingService = {
 
 ::: info
 C'est égallement le cas pour celui permettant d'Avoir les personnages
+:::
 
 **Code**
 ```ts
@@ -99,6 +101,7 @@ export const rankingService = {
 
 ::: info
 Et pour accéder aux vaisseaux
+:::
 
 **Code**
 ```ts
@@ -119,6 +122,7 @@ export const vaisseauxService = {
 Émile s'est spécialisé dans la création de tests optimal pour la vérification de tous les éléments dans la page. Comme on peut
 le ramarquer dans le code ci-bas, le test vérifie biens que CHAQUES éléments de la page sont biens présent. Merci Émile pour ton travail
 acharné.
+:::
 
 **Code**
 ```ts
@@ -147,6 +151,7 @@ acharné.
 Et ce n'est pas tout! non seulement ses tests vérifient la présence des différents éléments dans la page, mais en plus, ils vérifient
 leur fonctionnement! Le test ci-dessous vérifie que le nom est bien émis une fois enregistré. Ce qui permet d'épargner a nos coeurs
 le stress d'un boutton qui ne marcherait malencontreusement pas.
+:::
 
 **Code**
 ```ts
@@ -166,6 +171,7 @@ En plus des nombreux tests éxécuté à la perfection, mon Camarade de classe e
 de navigations dans l'applications. Ce qui s'avère très pratique pour les aventuriers cherchant à naviger dans l'application. Émile maitrise
 la création de boutton comme personne.
 "On ne va jamais aussi loin que lorsqu'on ne sait pas où on va." - Christophe Colomb
+:::
 
 **Code**
 ```ts
